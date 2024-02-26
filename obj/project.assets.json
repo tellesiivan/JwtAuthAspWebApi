@@ -4460,7 +4460,8 @@
       ],
       "sources": {
         "/usr/local/share/dotnet/library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/mahalo-tech/_packaging/Internal_Package_Feed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
