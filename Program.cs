@@ -1,5 +1,6 @@
 using System.Text;
 using JwtAuthAspWebApi.core.DbContext;
+using JwtAuthAspWebApi.services.auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -61,6 +62,8 @@ builder.Services
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:IssuerSigningKey"]!)),
         };
     });
+
+builder.Services.AddScoped<IAuth, Auth>();
 
 var app = builder.Build();
 
